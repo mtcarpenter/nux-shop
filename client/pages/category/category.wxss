@@ -1,0 +1,70 @@
+/* pages/category/category.wxss */
+.container{
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  align-items:flex-start;
+  flex-direction:row;
+}
+.left-container{
+  width:146rpx;
+  height: 100%;
+  background:rgba(248,248,248,1);
+}
+.categoryBar{
+  display: inline-flex;
+  width:100%;
+  height:100rpx;
+  justify-content: center;
+  align-items: center;
+  color:#7A7A7A;
+}
+.categoryBar text{
+  font-size:24rpx;
+  font-weight:500;
+  line-height:40rpx;
+}
+.active{
+  color:#000000;
+  background:#fff;
+  border-left:6rpx solid #FF6200;
+}
+.active text{
+  color: #FF6200;
+}
+/* 隐藏滚动条 */
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+/* 右边 */
+.right-containerr{
+  width: 100rpx;
+  min-height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+.introduce-image{
+  margin: 20rpx 16rpx;
+}
+.introduce-image image{
+  width:570rpx;
+  height:270rpx;
+  background:rgba(255,255,255,1);
+  border-radius:10rpx;
+}
+.category-name{
+  font-size:30rpx;
+  font-weight:400;
+  color:#686868;
+  text-align: center;
+}
+oduct-container{
+  display: flex;
+  flex-wrap:wrap;
+  margin: 10rpx 16rpx;
+}

@@ -1,0 +1,57 @@
+<!--pages/product/product.wxml-->
+<view class='container'>
+  <!-- 商品图片 -->
+  <view class='swiper-container'>
+       <image src="{{product.product_img}}" class="slide-image" />
+  </view>
+   <!-- 商品标题  -->
+  <view class='title-container'>
+    <view class="title">{{product.product_name}}</view>
+  </view>
+    <view class='price-container'>
+    <text class='symbol'>￥</text>
+    <text class='price'>{{product.product_sell_price}}</text>
+    <text class='market-price'>{{product.product_price}}</text>
+  </view>
+  <!-- 基本参数 -->
+  <view class='parameter-container'>
+    <text>快递:49包邮</text>
+    <text class='parameter-color'>剩余:{{product.product_stock}}</text>
+    <text>总销量:999</text>
+  </view>
+   <!-- tab选项卡 -->
+  <view class='tab-container'>
+    <view class="swiper-tab">
+        <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">商家详情</view>
+        <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">规格参数</view>
+    </view>
+    <view class='swiper-tab-show'>
+      <view class='dealer-details' wx:if="{{currentTab==0}}">
+         <text>商品详情正在更新中！</text>
+      </view>
+      <view class='format-container' wx:else>
+          <text>详情正在更新中!</text>
+      </view>
+    </view>
+  </view>
+  
+  <!-- 底部 -->
+    <view class='bottom-container'>
+      <view class='icon-container home' bind:tap='goHome' >
+        <icon class='iconfont iconziyuan'></icon>
+        <text>首页</text>
+      </view>
+      <view class="icon-container customer {{focusStatus?'focusActive':''}}" bind:tap='focus'>
+        <icon class="iconfont  iconshoucang1 "></icon>
+        <text>关注</text>
+      </view>
+      <view class='icon-container cart' bind:tap='goCart'>
+        <icon class='iconfont iconicon01'></icon>
+        <text>购物车</text>
+      </view>
+      <view class='go-container'>
+        <view class='joinCart' bind:tap='joinCart'><text>加入购物车</text></view>
+        <view class='immediately' bind:tap='immediately'><text>立即购买</text></view>
+      </view>
+  </view>
+</view>

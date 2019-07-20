@@ -1,0 +1,21 @@
+/* components/titleBar/index.wxss */
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 32rpx;
+  margin-top: 35rpx;
+}
+.line{
+  width:6rpx;
+  height:32rpx;
+  background:rgba(60,185,66,1);
+  border-radius:6rpx;
+}
+.text{
+  padding-left: 19rpx;
+  line-height:30rpx;
+  font-weight:400;
+  font-size:32rpx;
+  color:rgba(56,56,57,1);
+}

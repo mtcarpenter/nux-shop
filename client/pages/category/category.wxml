@@ -1,0 +1,26 @@
+<!-- pages/category/category.wxml -->
+<view class='container'>
+  <!-- 分类左边选择区域 -->
+  <scroll-view class='left-container' scroll-y="true">
+    <block wx:for="{{menuCategories}}" wx:key="key">
+      <view class="categoryBar {{ menuSelect==item.category_type?'active':''}}" data-id='{{item.category_type}}' data-index='{{index}}' bind:tap="menu">
+        <text>{{item.category_name}}</text>
+      </view>
+    </block>
+  </scroll-view>
+  <!-- 分类右边选择区域 -->
+  <scroll-view class='right-container' scroll-y="true">
+    <!-- 主题宣传图 -->
+    <view class='introduce-image'>
+      <image src='../../images/temp/category.png'></image>
+    </view>
+    <view class='category-name'>
+      <text>{{menuNmae}}</text>
+    </view>
+    <view class='product-container'>
+      <block wx:for="{{products}}" wx:key="key">
+        <category-comp product="{{item}}" bind:productDetails="productDetails"></category-comp>
+      </block>
+    </view>
+  </scroll-view>
+</view>

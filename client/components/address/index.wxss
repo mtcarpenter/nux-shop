@@ -1,0 +1,33 @@
+/* components/address/address.wxss */
+@import "/common/css/iconfont.wxss";
+.container{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  width: 696rpx;
+  margin-left: 28rpx;
+  height: 144rpx;
+}
+.address-title{
+  display: inline-flex;
+  width: 662rpx;
+  justify-content: space-between;
+  margin: 18rpx 0 0 0;
+  font-size:32rpx;
+}
+.address-content{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22rpx 0 0 0;
+
+}
+.address-content text{
+  font-size:28rpx;
+  color:#292929;
+  line-height:40rpx;
+}
+.address-content icon{
+  color:#A7A7A7;
+  font-size: 57rpx;
+}

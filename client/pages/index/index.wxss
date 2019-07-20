@@ -1,0 +1,61 @@
+/* pages/index/index.wxss */
+.container{
+  width:100%;
+  min-height: 100%;
+  display:flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+/* 轮播图 */
+.swiper-container{
+  height: 360rpx;
+  width: 100%;
+}
+.swiper-item{
+  width: 750rpx;
+  height:100%;
+  border-top-left-radius: cover;
+}
+.swiper-item image{
+  width: 100%;
+  height: 100%;
+}
+/* 主题栏样式 */
+.theme-container{
+  width: 660rpx;
+  height: 180rpx;
+  display: inline-flex;
+  background-color: #fff;
+  justify-content: space-between;
+}
+.theme-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  
+  align-items: center; 
+}
+.theme-icon{
+  width: 90rpx;
+  height: 90rpx;
+}
+.theme-icon image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.theme-box text{
+  height:28rpx;
+  font-size:24rpx;
+  color:rgba(83,82,83,1);
+  margin-top: 8rpx;
+}
+/* 分割线 */
+.dividing-line{
+  width:750rpx;
+  height:22rpx;
+  background:rgba(249,249,249,1);
+}
+/* 最新上线 */
+.products-latest-container{
+  width: 750rpx;
+  
+}

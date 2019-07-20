@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5cf533c5a87a1a18b6629a67"},"theme_name":"新品糖果","theme_type":1,"theme_icon":"/theme/theme@1.png"}
+{"_id":{"$oid":"5cf533c5a87a1a18b6629a69"},"theme_name":"精品果干","theme_type":2,"theme_icon":"/theme/theme@2.png"}
+{"_id":{"$oid":"5cf533c5a87a1a18b6629a6b"},"theme_name":"美味坚果","theme_type":3,"theme_icon":"/theme/theme@3.png"}
+{"_id":{"$oid":"5cf533c5a87a1a18b6629a6d"},"theme_name":"优质推荐","theme_type":4,"theme_icon":"/theme/theme@4.png"}

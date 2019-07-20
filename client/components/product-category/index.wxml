@@ -1,0 +1,10 @@
+<!--components/category/index.wxml-->
+<view class='container' >
+  <view class='product-img' bind:tap='productDetails'>
+    <image src='{{product.product_img}}'></image>
+  </view>
+  <view class='product-name'>
+    <text>{{product.product_name}}</text>
+  </view>
+  
+</view>

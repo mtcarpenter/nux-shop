@@ -1,0 +1,7 @@
+<!--pages/theme/theme.wxml-->
+<view class='container'>
+  <block wx:for="{{products}}" wx:key="key">
+    <product-row-comp product="{{item}}" bind:productDetails="productDetails"></product-row-comp>
+  </block>
+</view>
+

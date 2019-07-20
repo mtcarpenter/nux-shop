@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "product-row-comp": "/components/product-row/index"
+  }
+}

@@ -1,0 +1,31 @@
+<!-- pages/index/index.wxml -->
+<view class='container'>
+  <!-- 1、轮播图 -->
+  <swiper class='swiper-container' indicator-dots="{{indicatorDots}}" indicator-active-color='#fff' autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}">
+    <block wx:for="{{banners}}" wx:key="">
+      <swiper-item class='swiper-item' data-productId='{{item.product_id}}' bind:tap="productBanner">
+        <image class='swiper-img' src="{{item.image}}" mode='scaleToFill' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- 2、主题栏 -->
+  <view class='theme-container'>
+    <block wx:for="{{themes}}" wx:key="index">
+      <view class='theme-box' data-themeType="{{item.theme_type}}" bind:tap='themeNavigation'>
+        <view class='theme-icon'>
+          <image src='{{item.theme_icon}}'></image>
+        </view>
+        <text>{{item.theme_name}}</text>
+      </view>
+    </block>
+  </view>
+  <!-- 分割线 -->
+  <view class='dividing-line'></view>
+  <!-- 3、最新上线 -->
+  <view class='products-latest-container'>
+    <title-bar-comp title='最新上线'></title-bar-comp>
+    <block wx:for="{{products}}" wx:key="key">
+      <product-cloumn-comp product="{{item}}" bind:productDetails="productDetails"></product-cloumn-comp>
+    </block>
+  </view>
+</view>

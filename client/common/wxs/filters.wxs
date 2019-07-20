@@ -1,0 +1,18 @@
+var filters = {
+  toFix: function (value) {
+    if (value == 0 || !value){
+      return 0
+    }
+    return parseFloat(value).toFixed(2)
+  },
+  substringto16:function(value){
+    return value.substring(0,16)
+  }
+
+
+
+}
+module.exports = {
+  toFix: filters.toFix,
+  substringto16: filters.substringto16
+}

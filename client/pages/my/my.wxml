@@ -1,0 +1,49 @@
+<!-- pages/my/my.wxml -->
+<wxs module="statusModule" src="../../common/wxs/status.wxs"></wxs>
+<wxs module="filtersModule" src="../../common/wxs/filters.wxs"></wxs>
+<view class='container'>
+  <view class='head-container'>
+    <view class='header-img'>
+      <image src="{{userInfo.length!=0?userInfo.avatarUrl:defaultImg}}"></image>
+    </view>
+    <img-btn-comp open-type="getUserInfo" bind:getuserinfo="getuserinfo">
+      <view class='head-title' slot="info">
+        <view class='header-name'>
+          <text>{{userInfo.length!=0?userInfo.nickName:'点击登录'}}</text>
+        </view>
+      </view>
+    </img-btn-comp>
+  </view>
+  <!-- 订单部分 -->
+  <view class='my-order-container'>
+    <!-- 标签 -->
+    <title-bar-comp title='我的订单'></title-bar-comp>
+    <!-- 订单列表 -->
+    <block wx:for="{{orders}}" wx:key="index">
+      <view class="order-item">
+        <view class="order-header">
+          <view class="order-header-left">
+            <text>订单编号:</text>
+            <text class="order-no">{{filtersModule.substringto16(item._id)}}</text>
+          </view>
+          <view class="order-header-right">
+            <text class="order-status">{{statusModule.order(item.order_status)}}</text>
+          </view>
+        </view>
+        <view class="order-main">
+          <view class="item-left">
+            <image src="{{item.orderdetail[0].product_img}}"></image>
+          </view>
+          <view class="item-right">
+            <view>{{item.orderdetail[0].product_name}}</view>
+            <view>{{item.orderdetail.length}}件商品</view>
+          </view>
+        </view>
+        <view class="order-bottom">
+          <text>实付:￥{{item.order_amount}}</text>
+          <view class="pay" data-id="{{item._id}}" bind:tap="pay">立即支付</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

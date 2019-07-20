@@ -1,0 +1,5 @@
+{"_id":{"$oid":"5cf33a22a87a1a18b65a0095"},"category_name":"坚果炒货","category_type":1,"create_time":{"$date":"2019-06-02T02:45:42.090Z"},"update_time":{"$date":"2019-06-02T02:45:55.455Z"}}
+{"_id":{"$oid":"5cf33a22a87a1a18b65a0097"},"category_name":"休闲零食","category_type":2,"create_time":{"$date":"2019-06-02T02:45:42.090Z"},"update_time":{"$date":"2019-06-02T02:45:55.455Z"}}
+{"_id":{"$oid":"5cf33a22a87a1a18b65a0099"},"category_name":"饼干蛋糕","category_type":3,"create_time":{"$date":"2019-06-02T02:45:42.090Z"},"update_time":{"$date":"2019-06-02T02:45:55.455Z"}}
+{"_id":{"$oid":"5cf33a22a87a1a18b65a009b"},"category_name":"蜜饯果干","category_type":4,"create_time":{"$date":"2019-06-02T02:45:42.090Z"},"update_time":{"$date":"2019-06-02T02:45:55.455Z"}}
+{"_id":{"$oid":"5cf33a22a87a1a18b65a009d"},"category_name":"肉干肉脯","category_type":5,"create_time":{"$date":"2019-06-02T02:45:42.090Z"},"update_time":{"$date":"2019-06-02T02:45:55.455Z"}}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "分类",
+  "usingComponents": {
+    "category-comp": "/components/product-category/index"
+  }
+}

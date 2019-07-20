@@ -1,0 +1,59 @@
+/* components/product-row/index.wxss */
+@import "/common/css/iconfont.wxss";
+.container{
+  margin: 32rpx 10rpx 0 26rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+.product-top {
+  width:332rpx;
+  height:290rpx;
+}
+.product-top image{
+   width:332rpx;
+   height:290rpx;
+   border-radius: 20rpx; 
+}
+.product-title{
+  padding-left: 10rpx;
+  font-size:24rpx;
+  font-weight:500;
+  color:#242322;
+  line-height:34rpx;
+}
+.market-price{
+  margin-top:12rpx;
+  padding-left: 10rpx;
+}
+.market-price text{
+  font-size:24rpx;
+  font-weight:400;
+  text-decoration:line-through;
+  color:#797979;
+}
+.product-container{
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  padding-left: 10rpx;
+  margin-bottom: 10rpx;
+}
+.product-price text{
+  width:80rpx;
+  height:44rpx;
+  font-weight:500;
+  color:rgba(252,44,29,1);
+  line-height:26rpx;
+}
+.product-price text:first-child{
+  font-size:28rpx;
+}
+.product-price text:last-child{
+  font-size:32rpx;
+  margin-left: -1px;
+}
+.iconfont{
+  font-size: 52rpx;
+  color: #FC2C1D;
+  padding-right: 20rpx;
+}

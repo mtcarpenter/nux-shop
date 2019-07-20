@@ -1,0 +1,108 @@
+/* components/product-column/index.wxss */
+/* 容器盒子 */
+.container{
+  display: inline-flex;
+  width:683rpx;
+  margin-left: 32rpx;
+  border-bottom:2rpx solid rgba(220,220,220,1);
+  background:#fff;
+}
+/* 展示商品左边布局 */
+.product-left{
+  margin: 34rpx 0 30rpx 0;
+}
+.product-img image{
+  width:180rpx;
+  height:180rpx;
+  border-radius:10px;
+}
+/* 商品右边部分显示 */
+.product-right{
+  width: 100%;
+  height:180rpx;
+  margin:34rpx 0 0 30rpx;
+  display: inline-flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+/* 商品名 */
+.product-title{
+  font-size:30rpx;
+  font-weight:400;
+  color:#161514;
+}
+/* 市场价样式 */
+.market-price-container{
+  margin-bottom: -10rpx;
+}
+.market-price-container text{
+  height:23rpx;
+  font-size:24rpx;
+  font-weight:400;
+  color:#9B9B9B;
+ 
+}
+/* 优惠价格 */
+.discount-price-container{
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.discount-price-desc{
+  height:23rpx;
+  font-size:24rpx;
+  font-weight:400;
+  color:#424242;
+}
+.discount-price-symbol,.discount-price{
+  font-size:30rpx;
+  font-weight:400;
+  color:#FF5251;
+}
+.go{
+  width:156rpx;
+  height:56rpx;
+  line-height: 56rpx;
+  background:rgba(255,79,80,1);
+  border-radius:10rpx;
+  color: #fff;
+  font-size: 24rpx;
+}
+/* .title{
+  font-size:30rpx;
+  font-weight:400;
+  color:#161514;
+}
+.product-content{
+  font-size:28rpx;
+  font-weight:600;
+  color:rgba(87,87,87,1);
+  line-height:40rpx;
+  margin-top: 50rpx;
+}
+.price-container{
+  margin-top: 20rpx;
+}
+.price-symbol{
+  font-size:18rpx;
+  font-weight:500;
+  color:rgba(252,44,29,1);
+  line-height:26rpx;
+}
+.price{
+  font-size:32rpx;
+  font-weight:600;
+  color:rgba(252,44,29,1);
+  line-height:40rpx;
+}
+.product-right{
+  margin: 74rpx 42rpx 0 10rpx;
+  width:48rpx;
+  height:48rpx;
+
+}
+.product-right .iconfont{
+  font-size: 48rpx;
+  color: #FC2C1D;
+} */

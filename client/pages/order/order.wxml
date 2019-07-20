@@ -1,0 +1,69 @@
+<!--pages/order/order.wxml-->
+<wxs module="filter" src="../../common/wxs/filters.wxs"></wxs>
+<view class='container'>
+  <!-- 地址 -->
+  <view wx:if='{{address.length!=0}}'>
+    <view wx:if="{{status!=0}}">
+<address-comp addressInfo="{{address}}" slot="address"></address-comp>
+    </view>
+    <view wx:else>
+      <img-btn-comp open-type="primary" bind:addressInfo="address">
+        <address-comp addressInfo="{{address}}" slot="address"></address-comp>
+      </img-btn-comp>
+    </view>
+  </view>
+
+  <img-btn-comp open-type="primary" bind:addressInfo="addressInfo" wx:else>
+    <view class='redirect-address' slot="address">
+      <text class='redirect-text'>新增收货地址</text>
+      <icon class='iconfont icon-webicon213'></icon>
+    </view>
+  </img-btn-comp>
+  <view class='product-container'>
+    <block wx:for="{{products}}" wx:key="">
+      <view class="product-item">
+        <view class="item-left"  data-id="{{item.product_id}}" bind:tap="productDetail">
+          <image src="{{item.product_img}}"></image>
+        </view>
+        <view class="item-middle">
+          <view>{{item.product_name}}</view>
+          <view>￥{{item.product_sell_price==null?item.product_price:item.product_sell_price}}</view>
+        </view>
+        <view class="item-right">
+          ×{{item.counts==null?item.product_count:item.counts}}
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class='order-container'>
+    <view class='order-remarks'>
+     <view class='details' wx:if="{{orderId!=null}}">
+        <text>订单编号:</text>
+        <text>{{orderId}}</text>
+      </view>
+      <view class='details'>
+        <text>配送方式:</text>
+        <text>快递 免邮</text>
+      </view>
+      <view class='details'>
+        <text>优惠券:</text>
+        <text>暂无可用</text>
+      </view>
+      <view class='details'>
+        <text>配送费:</text>
+        <text>¥0</text>
+      </view>
+    </view>
+  </view>
+  <view class='confirm-container'>
+    <view class='total'>
+      <text>合计:</text>
+      <text>¥{{filter.toFix(account)}}</text>
+    </view>
+      <view class='confirm' data-key='{{item.key}}' bindtap='confirm'>
+        <text>立即购买</text>
+      </view>
+
+  </view>
+
+</view>

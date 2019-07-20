@@ -1,0 +1,59 @@
+<!--pages/cart/cart.wxml-->
+<view class='container'>
+  <view class='cart-container' wx:for="{{cartData}}" wx:key="index">
+    <!-- 商品左边 -->
+    <view class='cart-left-container' bindtap="toggleSelect" data-id="{{item._id}}" data-status="{{item.selectStatus}}" >
+        <view class="cart-select {{item.selectStatus?'selectActive':''}}"   >
+            <icon  class='iconfont iconiconfontcheck'></icon>
+        </view>   
+    </view>
+     <!-- 商品图片 -->
+    <view class='cart-middle-container' data-id="{{item._id}}" bind:tap="productDetail">
+        <image src="{{item.product_img}}"></image>
+    </view>
+    <view class='cart-right-container'>
+        <view class='product-basic'> 
+          <view class='product-title'>
+            <text>{{item.product_name}}</text>
+          </view>
+          <view class='product-price'>
+            <text>￥{{item.product_sell_price}}</text>
+          </view>
+        </view>  
+        <view class='edit-contianer'>
+           <view class='edit-num'>
+              <icon class="iconfont {{item.counts==1?'disabled':''}} iconjian  "  bind:tap="{{item.counts==1?'':'changeCounts'}}" data-id="{{item._id}}" data-type="cut"></icon>
+              <view class='num'> <text>{{item.counts}}</text></view>
+              <icon class='iconfont allow iconjia1' bindtap="changeCounts" data-id="{{item._id}}" data-type="add"></icon>
+           </view>
+           <view class='delete' data-id="{{item._id}}" bindtap="delete">
+            <icon class='iconfont iconshanchu'></icon>
+           </view>
+        </view>
+    </view>
+  </view>
+
+ <!-- 全选  wx:if="{{checkall?'selectActive':''}}" -->
+    <view class='bottom-container'> 
+      <view class='all-select'>
+        <view class="all-select-icon {{selectedCheckCounts==cartData.length?'selectActive':''}}"  bind:tap='checkall'   data-status="{{selectedCheckCounts==cartData.length?'true':'false'}}" >
+          <icon  class='iconfont iconiconfontcheck'></icon>
+        </view>
+        <view class='all-select-text'>
+            <text >全选</text>
+        </view>
+      </view>
+      <view class='total-container' >
+        <view class='total-price'>
+          <text>合计:</text>        
+          <text class='price-symbol' >￥</text>
+          <text class='price' >{{account}}</text>
+        </view>
+        <view class='accounts' bind:tap="confirm">
+          <text>结算</text>
+        </view>      
+      </view>
+    </view>
+
+
+</view>

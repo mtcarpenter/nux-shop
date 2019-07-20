@@ -1,0 +1,22 @@
+<!--components/product-row/index.wxml-->
+<view class='container'  bind:tap='productDetails'>
+  <view class='product-top' >
+    <image src="{{product.product_img}}"></image>
+  </view>
+  <view class='product-title' >
+    <text>{{product.product_name}}</text>
+  </view>
+  <view class='market-price' >
+    <text >￥</text>
+    <text>{{product.product_price}}</text>
+  </view>
+  <view class='product-container'>
+    <view class='product-price'>
+      <text >￥</text>
+      <text>{{product.product_sell_price}}</text>
+    </view>
+    <view class='product-cart' >
+      <icon class='iconfont icongouwuche'></icon>
+    </view>
+ </view>
+</view>
