@@ -52,7 +52,7 @@
   margin: 20rpx 16rpx;
 }
 .introduce-image image{
-  width:570rpx;
+  width:590rpx;
   height:270rpx;
   background:rgba(255,255,255,1);
   border-radius:10rpx;

@@ -1,17 +1,12 @@
 // 公共BaseModel
 const cloud = require('wx-server-sdk');
-// cloud.init({
-//   env: 'test-e7f9d3'
-//   // traceUser: true,
+//cloud.init({
+//  env: 'release-prod'
+//  traceUser: true,
 // });
-cloud.init()
+// 环境
+cloud.init({ env: process.env.Env })
 const db = cloud.database();
-/**
- * {
-  env: 'release-prod'
-  // traceUser: true,
-}
- */
 
 
 /**

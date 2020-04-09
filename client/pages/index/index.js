@@ -83,7 +83,7 @@ Page({
 
   },
   themeNavigation: function (event) {
-    let theme_type = indexModel.getDataSet(event, "theme_type")
+    let theme_type = indexModel.getDataSet(event, "themetype")
     wx.navigateTo({
       url: '../theme/theme?theme_type=' + theme_type,
     })

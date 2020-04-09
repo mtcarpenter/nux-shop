@@ -14,12 +14,6 @@ const IMAGEPREFIX = "cloud://release-prod.7265-release-prod"
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-  const { ENV } = cloud.getWXContext()
-  // 更新默认配置，将默认访问环境设为当前云函数所在环境
-  cloud.updateConfig({
-    env: ENV
-  })
-
   const app = new TcbRouter({ event });
   // app.use 表示该中间件会适用于所有的路由
   app.use(async (ctx, next) => {
@@ -122,11 +116,12 @@ exports.main = async (event, context) => {
 
   app.router('callFunc', async (ctx, next) => {
     // test 可参数类型 是否决定传参
-    console.log(event.data)
     ctx.data = "云函数之间的调用"
     ctx.body = await returnUtil.success(ctx);
     await next();
   })
+
+
 
 
 

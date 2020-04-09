@@ -1,0 +1,23 @@
+var status = {
+  order:function(num){
+    var value = ""
+    switch (num) {
+      case 0:
+        value = "未支付"
+        break
+      case 1:
+        value = "已支付"
+        break
+      case 2:
+        value = "已发货"
+        break
+      case 3:
+        value = "已支付，但库存不足"
+        break
+    }    
+   return value
+  }
+}
+module.exports = {
+  order: status.order
+}
